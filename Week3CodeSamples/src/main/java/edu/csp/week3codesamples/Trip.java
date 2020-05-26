@@ -26,5 +26,40 @@ public class Trip implements Serializable {
     public void addLocation(String location) {
         locations.add(location);
     }
+
+    //Getters and Setters
+    public String getTripName() {
+        return tripName;
+    }
+
+    public void setTripName(String tripName) {
+        this.tripName = tripName;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public ArrayList<String> getLocations() {
+        return locations;
+    }
+
+    public void setLocations(ArrayList<String> locations) {
+        this.locations = locations;
+    }
+    
+    
     
 }

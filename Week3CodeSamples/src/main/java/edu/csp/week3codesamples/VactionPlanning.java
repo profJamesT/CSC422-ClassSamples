@@ -34,45 +34,13 @@ public class VactionPlanning {
         tripList.add(tripThree);
         
         //save the trips
-        ObjectOutputStream oos = null;
-        FileOutputStream fout = null;
-        try{
-            fout = new FileOutputStream("James.ser", true);
-            oos = new ObjectOutputStream(fout);
-            oos.writeObject(tripList);
-        } catch (Exception ex) {
-            System.out.println("Error when trying to write the file!");
-        } finally {
-            if(oos != null){
-                try {
-                    oos.close();
-                } catch (Exception e) {
-                    System.out.println("Error when trying to close the file!");
-                }
-            } 
-        }
-        
+  
+  
+        //init the tripList before loading to make sure its actually loading
         tripList = null;
         
         //load the trips
-        ObjectInputStream objectinputstream = null;
-        try {
-            FileInputStream streamIn = new FileInputStream("James.ser");
-            objectinputstream = new ObjectInputStream(streamIn);
-            tripList = (ArrayList<Trip>) objectinputstream.readObject();
-            //tripList.add(readCase);
-            //System.out.println(recordList.get(i));
-        } catch (Exception e) {
-            System.out.println("Error while loading: " + e);
-        } finally {
-            if(objectinputstream != null){
-                try {
-                objectinputstream .close();
-                } catch (Exception e) {
-                    System.out.println("Error closing file:" + e);
-                }
-            } 
-        }
+
         
         for (Trip t : tripList) {
             System.out.println(t.getTripName() + " - " + t.getLocations().size());
