@@ -22,14 +22,19 @@ public class VactionPlanning {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
+    public static void main(String[] args) {
+        
+        //create the trip list
         ArrayList<Trip> tripList = new ArrayList<Trip>();
+        
+        //create some trips
         Trip tripOne = new Trip("Hawaii");
         Trip tripTwo = new Trip("Alaska");
         Trip tripThree = new Trip("TheOfficeLocations");
         tripThree.addLocation("Scranton");
         tripThree.addLocation("New York");
         
+        //add the newly created lists to the ArrayList
         tripList.add(tripOne);
         tripList.add(tripTwo);
         tripList.add(tripThree);
@@ -56,7 +61,8 @@ public class VactionPlanning {
         } catch (ClassNotFoundException ex) {
             System.out.println("ClassNotFoundException: " + ex);
         }
-        
+
+        //loop through all the lists and detail them and the number of locations in the trips
         for (Trip t : tripList) {
             System.out.println(t.getTripName() + " - " + t.getLocations().size());
         }
