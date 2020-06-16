@@ -11,10 +11,12 @@ package edu.csp.classsampleweek1;
  */
 public class Math {
     
+    //Square a parameter
     public int squareIt(int x) {
         return x * x;
     }
     
+    //Is the parameter even
     public boolean isEven(int x) {
         if (x%2 == 0) {
             return true;
@@ -23,6 +25,7 @@ public class Math {
         }
     }
     
+    //sum the two parameters
     public int sumIt(int x, int y) {
         return x * y;
     }
